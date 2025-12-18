@@ -12,7 +12,10 @@ function StudentsList(){
             <ul>
                 {students.map((student) => (
                     <li key={student.id}>
-                        Name :{student.name} - Age: {student.age}, Major: {student.major}
+                    {student.name} -  {student.major}
+                    <button onClick={() => deleteStudent(student.id)}>
+                        Delete
+                        </button>
                     </li>
                 ))}
             </ul>
